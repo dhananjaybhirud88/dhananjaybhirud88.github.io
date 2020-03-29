@@ -236,7 +236,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.router.events.subscribe(function (val) {
-            if (_this.location.path() == '/login') {
+            if (_this.location.path() == '/login' || _this.location.path() == '') {
               _this.loginPage = true;
             } else {
               _this.loginPage = false;
@@ -427,6 +427,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _common_directives_hover_class_directive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./common/directives/hover-class.directive */
     "./src/app/common/directives/hover-class.directive.ts");
+    /* harmony import */
+
+
+    var _customers_customers_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./customers/customers.component */
+    "./src/app/customers/customers.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -446,7 +452,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _common_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _common_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _common_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], _common_directives_hover_class_directive__WEBPACK_IMPORTED_MODULE_11__["HoverClassDirective"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _common_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _common_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _common_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], _common_directives_hover_class_directive__WEBPACK_IMPORTED_MODULE_11__["HoverClassDirective"], _customers_customers_component__WEBPACK_IMPORTED_MODULE_12__["CustomersComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"]]
       });
     })();
@@ -457,7 +463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _common_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _common_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _common_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], _common_directives_hover_class_directive__WEBPACK_IMPORTED_MODULE_11__["HoverClassDirective"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _common_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _common_footer_footer_component__WEBPACK_IMPORTED_MODULE_5__["FooterComponent"], _common_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_7__["SidebarComponent"], _login_login_component__WEBPACK_IMPORTED_MODULE_8__["LoginComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_9__["DashboardComponent"], _profile_profile_component__WEBPACK_IMPORTED_MODULE_10__["ProfileComponent"], _common_directives_hover_class_directive__WEBPACK_IMPORTED_MODULE_11__["HoverClassDirective"], _customers_customers_component__WEBPACK_IMPORTED_MODULE_12__["CustomersComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -1374,7 +1380,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "a", 19);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "some");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Customers");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1384,7 +1390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 19);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "some");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Our Team");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -1477,6 +1483,83 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           selector: 'app-sidebar',
           templateUrl: './sidebar.component.html',
           styleUrls: ['./sidebar.component.scss']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/customers/customers.component.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/customers/customers.component.ts ***!
+    \**************************************************/
+
+  /*! exports provided: CustomersComponent */
+
+  /***/
+  function srcAppCustomersCustomersComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "CustomersComponent", function () {
+      return CustomersComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var CustomersComponent = /*#__PURE__*/function () {
+      function CustomersComponent() {
+        _classCallCheck(this, CustomersComponent);
+      }
+
+      _createClass(CustomersComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return CustomersComponent;
+    }();
+
+    CustomersComponent.ɵfac = function CustomersComponent_Factory(t) {
+      return new (t || CustomersComponent)();
+    };
+
+    CustomersComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: CustomersComponent,
+      selectors: [["app-customers"]],
+      decls: 2,
+      vars: 0,
+      template: function CustomersComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "customers works!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVycy9jdXN0b21lcnMuY29tcG9uZW50LnNjc3MifQ== */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CustomersComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-customers',
+          templateUrl: './customers.component.html',
+          styleUrls: ['./customers.component.scss']
         }]
       }], function () {
         return [];
