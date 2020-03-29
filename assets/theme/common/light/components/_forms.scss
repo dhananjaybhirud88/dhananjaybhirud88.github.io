@@ -23,6 +23,12 @@
   padding: 0.875rem 0.875rem;
 }
 
+.form-control-sm{
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.5rem 0.81rem;
+  font-size: 0.875rem;
+}
+
 select {
   &.form-control {
     padding: .4375rem .75rem;
